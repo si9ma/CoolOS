@@ -47,7 +47,7 @@ entry:
 	MOV		SS,AX
 	MOV		SP,0x7c00
 	MOV		DS,AX
-	MOV		SI,msg			; Move the message to SI
+	MOV		SI,msg			; Move the address of message to SI
 
 putloop:
 	MOV		AL,[SI]
