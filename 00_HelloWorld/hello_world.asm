@@ -1,4 +1,4 @@
-; File: hello.asm
+; File: hello_world.asm
 ; Author: Beta
 ; Blog: http://www.hellobeta.me
 ; Mode: 16 bits
@@ -67,7 +67,7 @@ fin:
 ; Message
 msg:
 	DB		0x0a, 0x0a	    ; Two line feed
-	DB		"************"
+	DB		"*****************************"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed.0x0d+0x0a==\n
 	DB		"Hello World"
@@ -82,7 +82,7 @@ msg:
 	DB		"Blog: http://www.hellobeta.me"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
-	DB		"************"
+	DB		"*****************************"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
 	DB		0				; End of String
