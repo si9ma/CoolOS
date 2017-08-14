@@ -9,3 +9,7 @@ usage:
 ```bash
 make run
 ```
+
+result:
+
+![](./01_ProtectedMode.png)
