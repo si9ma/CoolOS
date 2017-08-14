@@ -54,3 +54,7 @@ dkms.conf
 # BetaOS
 *.bin
 *.img
+*.o
+*.out
+*.d
+kernel
