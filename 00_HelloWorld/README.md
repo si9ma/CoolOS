@@ -4,3 +4,6 @@ usage:
 ```bash
 make run
 ```
+
+result:
+![](./00_HelloWorld.png)
