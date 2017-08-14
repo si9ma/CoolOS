@@ -5,7 +5,7 @@
 ; Syntax: NASM
 ; Function: boot BetaOS
 
-	NUM EQU 40				; the number of sector we need to read
+	NUM EQU 80				; the number of sector we need to read
 
 	[BITS 16]				; tell the assembler that its a 16 bit code
 	[ORG 0x7c00]			; tells the assembler that where the code will
@@ -56,9 +56,9 @@ entry:
 
 ; Read data into memory from floppy
 ; ES:BX=where the data will.0x7E00~0x9FBFF is free to use.
-; So,set ES to 0x7E00,set BX to 0x0.
+; So,set ES to 0x0820,set BX to 0x0.
 ; Reference: http://wiki.osdev.org/Memory_Map_(x86)#Overview
-	MOV		AX,0x7E00		
+	MOV		AX,0x0820	
 	MOV		ES,AX
 	MOV		CH,0			; cylinder number=0
 	MOV		DH,0			; head number=0
@@ -114,7 +114,7 @@ error:
 success:
 	MOV		SI,success_msg
 	CALL	putloop
-	JMP		fin
+	JMP		0xC400
 
 ; Print string on the screen
 putloop:
