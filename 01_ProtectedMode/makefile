@@ -32,7 +32,6 @@ boot_loader.bin:
 
 kernel:bootasm.o bootmain.o
 	ld $(LDFLAGS) -N -e start -Ttext $(addr) -o $@.out $^
-	objdump -S $@.out >$@.asm
 	objcopy -S -O binary -j .text $@.out $@
 
 bootasm.o:bootasm.S
