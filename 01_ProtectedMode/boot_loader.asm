@@ -1,9 +1,9 @@
 ; File: boot_loader.asm
-; Author: Beta
-; Blog: http://www.hellobeta.me
+; Author: si9ma
+; Blog: http://www.coolcodes.me
 ; Mode: 16 bits
 ; Syntax: NASM
-; Function: boot BetaOS
+; Function: boot CoolOS
 
 	NUM EQU 80				; the number of sector we need to read
 
@@ -15,7 +15,7 @@
 
 	JMP		entry			; jump to entry
 	DB		0x90			; NOP
-	DB		" BetaOS "		; OEM identifier,must 8 bytes.
+	DB		" CoolOS "		; OEM identifier,must 8 bytes.
 	DW		512				; The number of Bytes per sector		
 	DB		1				; Number of sectors per cluster.	
 	DW		1				; Number of reserved sectors. 
@@ -32,7 +32,7 @@
 	DB		0				; Flags in Windows NT. 
 	DB		0x29			; Signature (must be 0x28 or 0x29).
 	DD		0xffffffff		; VolumeID 'Serial' number.
-	DB		"BetaOS     "	; Volume label string,must 11 bytes.
+	DB		"CoolOS     "	; Volume label string,must 11 bytes.
 	DB		"FAT12   "		; System identifier string.must 8 bytest.		
 
 ; Boot Code
@@ -143,13 +143,13 @@ msg:
 	DB		"Hello World"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
-	DB		"This is BetaOS"
+	DB		"This is CoolOS"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
-	DB		"Author: Beta"
+	DB		"Author: si9ma"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
-	DB		"Blog: http://www.hellobeta.me"
+	DB		"Blog: http://www.coolcodes.me"
 	DB		0x0d			; One carriage return
 	DB		0x0a			; One line feed 
 	DB		"******************************"

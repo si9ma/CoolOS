@@ -1,8 +1,8 @@
-# Author: Beta
-# Blog: http://www.hellobeta.me
+# Author: si9ma
+# Blog: http://www.coolcodes.me
 
 # Img file we will use to boot
-IMG=BetaOS.img
+IMG=CoolOS.img
 
 # detect architecture for qemu Smartly.
 ifeq ($(shell uname -m),x86_64)

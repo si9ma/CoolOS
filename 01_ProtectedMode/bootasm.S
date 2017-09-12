@@ -1,6 +1,6 @@
 # File: bootasm.S
-# Author: Beta
-# Blog: http://www.hellobeta.me
+# Author: si9ma
+# Blog: http://www.coolcodes.me
 # Reference: https://github.com/mit-pdos/xv6-public/blob/master/bootasm.S
 # Reference: https://github.com/zchrissirhcz/osask-linux/blob/master/day3.9/kernel/entry.S 
 
@@ -287,7 +287,7 @@ check_a20__exit:
 
 # data
 msg:
-	.asciz "\nThis is BetaOS\r\n\n"
+	.asciz "\nThis is CoolOS\r\n\n"
 
 enable_msg:
 	.asciz "\r\nA20 was already enabled,skiping...\r\n\n"
